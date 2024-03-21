@@ -28,6 +28,13 @@ form{
 
 #todoContainer{
   font-size: x-large;
+display: flex;
+justify-content: center;
 }
 
+
+.todo{
+  display: flex;
+  
+}
 
