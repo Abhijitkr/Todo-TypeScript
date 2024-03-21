@@ -35,6 +35,9 @@ justify-content: center;
 
 .todo{
   display: flex;
-  
+}
+
+.checkCompleted{
+  text-decoration: line-through;
 }
 
