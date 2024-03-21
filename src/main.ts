@@ -2,7 +2,6 @@ import "./style.css";
 
 const form = document.querySelector("form") as HTMLFormElement;
 const todoField = document.getElementById("todoField") as HTMLInputElement;
-// const todoBtn = document.createElement('createTodo') as HTMLButtonElement;
 const todoContainer = document.getElementById(
   "todoContainer"
 ) as HTMLDivElement;
@@ -56,12 +55,15 @@ function generateTodoList(id: string, title: string, isCompleted: boolean) {
   p.className = checkbox.checked ? "checkCompleted" : "";
   p.innerText = title;
 
+  const div: HTMLDivElement = document.createElement("div");
+  div.append(checkbox, p);
+
   const li: HTMLLIElement = document.createElement("li");
   li.className = "todo";
-  // li.id = id;
-  li.append(checkbox, p, remove);
+  li.append(div, remove);
 
   ul.appendChild(li);
+
   todoContainer.appendChild(ul);
 }
 
